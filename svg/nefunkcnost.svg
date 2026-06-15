@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 620" width="100%" height="100%">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <style>
+    .title { font-family: sans-serif; font-size: 18px; font-weight: bold; fill: #333; }
+    .node-title { font-family: sans-serif; font-size: 13px; font-weight: bold; fill: #222; }
+    .node-type { font-family: sans-serif; font-size: 11px; font-style: italic; fill: #555; }
+    .comp-title { font-family: sans-serif; font-size: 12px; font-weight: bold; fill: #000; }
+    .note-text { font-family: sans-serif; font-size: 11px; fill: #333; }
+    .note-bold { font-weight: bold; }
+    .line-text { font-family: sans-serif; font-size: 11px; fill: #444; }
+  </style>
+  <rect width="100%" height="100%" fill="#fafafa"/>
+  <g filter="url(#shadow)">
+    <rect x="30" y="80" width="340" height="200" rx="5" fill="#f4f4f6" stroke="#888" stroke-width="1.5"/>
+    <text x="45" y="100" class="node-title" style="white-space: pre;">Klientská vrstva (Client Devices)</text>
+    <rect x="50" y="115" width="300" height="145" rx="3" fill="#e9e9ed" stroke="#777" stroke-dasharray="4,4"/>
+    <text x="60" y="132" class="node-title" style="white-space: pre;">Chytrý telefon / PC</text>
+    <text x="60" y="145" class="node-type" style="white-space: pre;">&lt;&lt;device&gt;&gt;</text>
+    <rect x="70" y="165" width="260" height="75" fill="#fffbdb" stroke="#b8a600" stroke-width="1.5"/>
+    <rect x="305" y="170" width="15" height="10" fill="#fffbdb" stroke="#b8a600"/>
+    <rect x="300" y="172" width="6" height="2" fill="#fffbdb" stroke="#b8a600"/>
+    <rect x="300" y="176" width="6" height="2" fill="#fffbdb" stroke="#b8a600"/>
+    <text x="85" y="195" class="comp-title" style="white-space: pre;">UI (React / Vue / HTML5)</text>
+    <text x="85" y="212" class="note-text" style="white-space: pre;">• NFR-04: Mobile-First Design</text>
+    <text x="85" y="227" class="note-text" style="white-space: pre;">• NFR-05: Podpora prohlížečů (Chrome, Safari...)</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="440" y="80" width="480" height="400" rx="5" fill="#e8f4fd" stroke="#0066cc" stroke-width="1.5"/>
+    <text x="455" y="102" class="node-title" style="white-space: pre;">Serverová vrstva (Cloud / Hosting)</text>
+    <text x="850" y="102" class="node-type" style="white-space: pre;">&lt;&lt;HTTPS&gt;&gt;</text>
+    <rect x="460" y="120" width="440" height="75" rx="3" fill="#ffffff" stroke="#0044aa" stroke-width="1.2"/>
+    <text x="475" y="140" class="comp-title" style="white-space: pre;">Webový server (Nginx / Apache)</text>
+    <text x="475" y="158" class="note-text class=note-bold" style="white-space: pre;">• NFR-01: Dostupnost 24/7 (min 98 %)</text>
+    <text x="475" y="173" class="note-text" style="white-space: pre;">• NFR-07: Bezpečný protokol HTTPS (SSL/TLS)</text>
+    <rect x="460" y="215" width="440" height="170" rx="3" fill="#ffffff" stroke="#0044aa" stroke-width="1.2"/>
+    <text x="475" y="235" class="comp-title" style="white-space: pre;">Backend aplikace (API)</text>
+    <rect x="475" y="250" width="410" height="35" fill="#f0f7ff" stroke="#0066cc"/>
+    <text x="485" y="271" class="note-text" style="white-space: pre;"><tspan class="note-bold">NFR-02 &amp; 03 (Výkon):</tspan> Odezva do 2s, automatická komprese obrázků</text>
+    <rect x="475" y="295" width="410" height="35" fill="#f0f7ff" stroke="#0066cc"/>
+    <text x="485" y="316" class="note-text" style="white-space: pre;"><tspan class="note-bold">NFR-06 (Bezpečnost):</tspan> Omezení vícenásobného hlasování (OAuth MS/Google)</text>
+    <rect x="475" y="340" width="410" height="35" fill="#f0f7ff" stroke="#0066cc"/>
+    <text x="485" y="361" class="note-text" style="white-space: pre;"><tspan class="note-bold">NFR-08 (GDPR):</tspan> Ochrana údajů, anonymní komentáře / přezdívky</text>
+    <path d="M 460 425 C 460 415, 520 415, 520 425 L 520 460 C 520 470, 460 470, 460 460 Z" fill="#fff" stroke="#0044aa" stroke-width="1.5"/>
+    <path d="M 460 425 C 460 433, 520 433, 520 425" fill="none" stroke="#0044aa" stroke-width="1.5"/>
+    <text x="535" y="440" class="comp-title" style="white-space: pre;">RDBMS (MySQL / PostgreSQL)</text>
+    <text x="535" y="455" class="note-text" style="white-space: pre;">Ukládání hashů, unikátní indexy proti spamu</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="30" y="360" width="340" height="120" rx="5" fill="#f9f0ff" stroke="#6600cc" stroke-width="1.5"/>
+    <text x="45" y="385" class="node-title" style="white-space: pre;">Vývojové a projektové prostředí</text>
+    <rect x="50" y="400" width="300" height="65" fill="#ffffff" stroke="#5500aa" stroke-width="1"/>
+    <text x="65" y="420" class="comp-title" style="white-space: pre;">Git Repozitář (GitHub / GitLab)</text>
+    <text x="65" y="438" class="note-text class=note-bold" style="white-space: pre;">• NFR-09: Čitelnost kódu, verzování, dokumentace</text>
+    <text x="65" y="450" class="note-text" style="white-space: pre;">Předatelné pro další ročníky studentů SPŠ a VOŠ</text>
+  </g>
+  <path d="M 370 180 L 440 180" fill="none" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="382" y="173" class="line-text" font-weight="bold" style="white-space: pre;">HTTPS</text>
+  <path d="M 490 385 L 490 415" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <path d="M 460 300 L 400 300 L 400 390 L 370 390" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="385" y="293" class="line-text" style="white-space: pre;">CI/CD</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
